@@ -1,5 +1,13 @@
 .App {
-  text-align: center;
+  /*background-image:url("./img/androidcode.png");*/
+  /*background-color: yellow;*/
+  background-repeat: no-repeat;
+  /*padding:100px;*/
+  background-clip:padding-box;
+  /*background-origin: content-box;*/
+  /*border-color: red;*/
+  /*border-style: double;*/
+  /*border-left-width: 100px;*/
 }
 
 .App-logo {
@@ -7,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,4 +27,25 @@
 
 .App-link {
   color: #09d3ac;
+}
+.text-div{
+  border-color: blueviolet;
+  border-width: 1px;
+  border-style: solid;
+}
+.test-p1{
+  width: 100%;
+  color:blueviolet;
+  vertical-align:text-top;
+  text-align:center;
+  background-color: red;
+  line-height: 300%;
+}
+/*img.bottom {vertical-align:text-bottom;}*/
+.top {
+  background-color: yellow;
+  vertical-align:text-bottom;
+  display: inline;
+  height:200px;
+  width:200px;
 }
