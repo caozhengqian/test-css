@@ -37,7 +37,7 @@ class Null extends React.Component {
          }
 
         //555555555555555555555555555555555555555
-        let abc5;//undefined
+        let abc5 = null;//undefined
         if(abc5){
             console.info(abc5)
             console.info("abc5,true")
@@ -45,6 +45,47 @@ class Null extends React.Component {
             //走false这里
             console.info(abc5)
             console.info("abc5,false")
+        }
+
+        //666666666666666666666666666666666666666666666
+        let abc6 = "";//undefined
+        if(abc6){
+            console.info(abc6)
+            console.info("abc6,true")
+        }else{
+            //走false这里
+            console.info(abc6)
+            console.info("abc6,false")
+        }
+        //7777777777777777777777777777777777777777
+        let abc7 = 0;//undefined
+        if(abc7){
+            console.info(abc7)
+            console.info("abc7,true")
+        }else{
+            //走false这里
+            console.info(abc7)
+            console.info("abc7,false")
+        }
+        //88888888888888888888888888888888888
+        let abc8 = "0";//undefined
+        if(abc8){
+            console.info(abc8)
+            console.info("abc8,true")
+        }else{
+            //走false这里
+            console.info(abc8)
+            console.info("abc8,false")
+        }
+        //9999999999999999999999
+        let abc9 = "false";//undefined
+        if(abc9){
+            console.info(abc9)
+            console.info("abc9,true")
+        }else{
+            //走false这里
+            console.info(abc9)
+            console.info("abc9,false")
         }
     }
 
