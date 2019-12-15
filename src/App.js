@@ -5,7 +5,8 @@ import {
     Route,
 } from "react-router-dom";
 import BackgroundImg from './background/backgroundImg';
-import Null from "./null/null"
+import Null from "./null/null";
+import Antd from "../src/antd"
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
               <Route path="/null">
                   <Null />
               </Route>
+              <Route path="/antd">
+                  <Antd />
+              </Route>
+
           </Switch>
       </Router>
   );
