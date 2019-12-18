@@ -5,9 +5,10 @@ import {
     Route,
 } from "react-router-dom";
 import { withRouter } from "react-router";
-import ButtonAntd from "./ButtonAntd"
-import Dropdown from "./Dropdown"
-import Menu from "./Menu"
+import ButtonAntd from "./ButtonAntd";
+import Dropdown from "./Dropdown";
+import Menu from "./Menu";
+import Form from "./Form";
 
 class Antd extends React.PureComponent {
 
@@ -24,7 +25,7 @@ class Antd extends React.PureComponent {
                 <Route path={`${path}/button`} component={ButtonAntd} />
                 <Route path={`${path}/dropdown`} component={Dropdown} />
                 <Route path={`${path}/menu`} component={Menu} />
-
+                <Route path={`${path}/form`} component={Form} />
             </Switch>
         );
     }
