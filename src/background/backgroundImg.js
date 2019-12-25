@@ -1,5 +1,5 @@
 import React from 'react';
-import './backgroundImg.css'
+import './backgroundImg.less'
 function BackGroundImg() {
     return (
         <div className="App">
