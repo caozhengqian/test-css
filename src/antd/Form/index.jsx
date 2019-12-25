@@ -33,7 +33,9 @@ class FromA  extends React.Component {
                 <Form layout="inline" onSubmit={this.handleSubmit}>
                     <Form.Item validateStatus={usernameError ? 'error' : ''} help={usernameError || ''}>
                         {getFieldDecorator('username', {
-                            rules: [{ required: true, message: 'Please input your username!' }],
+                            rules: [{type:"number", required: true, message: 'Please input your username number!' }
+                            ,{type:"string", required: true, message: 'Please input your username string!' }
+                            ],
                         })(
                             <Input
                                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
