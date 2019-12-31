@@ -1,21 +1,30 @@
 import React, {Component} from "react";
 import {Row, Col} from 'antd';
-import "./style.less";
 
 export class AntdShuXing extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            value:"moren"
+        };
     }
 
     componentDidMount() {
 
     }
+    onChangeText(){
+        const {desc} = this.props;
+        this.setState({value:desc})
+    }
+    onChangeTextMove(){
+        const {shuxing} = this.props;
+        this.setState({value:shuxing})
+    }
 
     render() {
-        const {shuxing , desc} = this.props
+        const{value} = this.state;
         return (
-            <span style={{color: "red"}}>{shuxing}</span>
+            <span style={{color: "red"}} onMouseOver={()=>this.onChangeText()} onMouseOut={()=>this.onChangeTextMove()}>{value}</span>
         );
     }
 }

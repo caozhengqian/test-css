@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {AutoComplete, Input, Row, Col} from 'antd';
+import AntdShuXing from "../../../compotents/AntdShuXing"
 
 function onSelect(value) {
     console.log('onSelect', value);
@@ -33,7 +34,7 @@ export class AutoCompleteA extends Component {
             <>
                 <Row type="flex" align="top" style={{marginTop: "10px"}}>
                     <Col span={3} offset={1}>
-                        <span style={{color: "red"}}>allowClear</span>
+                       <AntdShuXing shuxing={"aaa"} desc={"bbbbb"}/>
                     </Col>
                     <Col span={18}>
                         <Row type="flex" align="middle">
