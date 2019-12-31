@@ -5,15 +5,12 @@ import {
     Route,
 } from "react-router-dom";
 import { withRouter } from "react-router";
-import ButtonAntd from "./ButtonAntd";
-import Dropdown from "./Dropdown";
-import Menu from "./Menu";
-import Form from "./Form";
+import DataInput from './DataInput';
+
 
 class Antd extends React.PureComponent {
 
     componentDidMount(){
-        console.info("this.props",this.props)
     }
 
     render(){
@@ -22,10 +19,8 @@ class Antd extends React.PureComponent {
         } = this.props;
         return (
             <Switch>
-                <Route path={`${path}/button`} component={ButtonAntd} />
-                <Route path={`${path}/dropdown`} component={Dropdown} />
-                <Route path={`${path}/menu`} component={Menu} />
-                <Route path={`${path}/form`} component={Form} />
+                <Route path={`${path}/datainput`} component={DataInput} />
+
             </Switch>
         );
     }
