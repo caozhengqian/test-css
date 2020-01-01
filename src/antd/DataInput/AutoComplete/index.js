@@ -34,7 +34,7 @@ export class AutoCompleteA extends Component {
             <>
                 <Row type="flex" align="top" style={{marginTop: "10px"}}>
                     <Col span={3} offset={1}>
-                       <AntdShuXing shuxing={"aaa"} desc={"bbbbb"}/>
+                       <AntdShuXing shuxing={"allowClear"} desc={"支持清除, 单选模式有效"}/>
                     </Col>
                     <Col span={18}>
                         <Row type="flex" align="middle">

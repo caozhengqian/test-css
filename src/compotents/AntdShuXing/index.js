@@ -10,7 +10,7 @@ export class AntdShuXing extends Component {
     }
 
     componentDidMount() {
-
+        this.setState({value:this.props.shuxing})
     }
     onChangeText(){
         const {desc} = this.props;
