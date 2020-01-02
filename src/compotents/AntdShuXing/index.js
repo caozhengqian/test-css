@@ -5,26 +5,32 @@ export class AntdShuXing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value:"moren"
+            value: "moren"
         };
     }
 
     componentDidMount() {
-        this.setState({value:this.props.shuxing})
+        this.setState({value: this.props.shuxing})
     }
-    onChangeText(){
+
+    onChangeText() {
         const {desc} = this.props;
-        this.setState({value:desc})
+        this.setState({value: desc})
     }
-    onChangeTextMove(){
+
+    onChangeTextMove() {
         const {shuxing} = this.props;
-        this.setState({value:shuxing})
+        this.setState({value: shuxing})
     }
 
     render() {
-        const{value} = this.state;
+        const {value} = this.state;
         return (
-            <span style={{color: "red"}} onMouseOver={()=>this.onChangeText()} onMouseOut={()=>this.onChangeTextMove()}>{value}</span>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+                <span style={{color: "red", cursor: "pointer", wordBreak: "break-all"}}
+                      onMouseOver={() => this.onChangeText()} onMouseOut={() => this.onChangeTextMove()}>{value}</span>
+                <span >==></span>
+            </div>
         );
     }
 }

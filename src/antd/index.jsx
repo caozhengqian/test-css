@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { withRouter } from "react-router";
 import DataInput from './DataInput';
+import DataShow from "./DataShow";
 
 
 class Antd extends React.PureComponent {
@@ -20,6 +21,7 @@ class Antd extends React.PureComponent {
         return (
             <Switch>
                 <Route path={`${path}/datainput`} component={DataInput} />
+                <Route path={`${path}/datashow`} component={DataShow} />
 
             </Switch>
         );
