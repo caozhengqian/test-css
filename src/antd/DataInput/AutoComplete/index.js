@@ -107,7 +107,7 @@ export class AutoCompleteA extends Component {
                 </Option>,
             ]);
         return (
-            <>
+            <div style={{paddingBottom:"100px"}}>
                 <Row type="flex" align="top" style={{marginTop: "10px"}}>
                     <Col span={3} offset={1}>
                         <AntdShuXing shuxing={"allowClear"} desc={"支持清除, 单选模式有效"}/>
@@ -216,7 +216,6 @@ export class AutoCompleteA extends Component {
                                 <AutoComplete
                                     dataSource={dataSource}
                                     style={{width: 200}}
-                                    
                                     onSearch={this.onSearch}
                                     placeholder="input here"
                                     allowClear={true}
@@ -257,7 +256,7 @@ export class AutoCompleteA extends Component {
                 </Row>
                 <Row type="flex" align="top" style={{marginTop: "10px"}}>
                     <Col span={3} offset={1}>
-                        <AntdShuXing shuxing={"children(AutoComplete.Option)"}
+                        <AntdShuXing shuxing={"children(AutoComplete.Option，可disable)"}
                                      desc={"不使用datasource，直接使用AutoComplete.Option"}/>
                     </Col>
                     <Col span={20}>
@@ -276,7 +275,7 @@ export class AutoCompleteA extends Component {
                                     autoFocus={false}
                                     backfill={true}
                                 >
-                                    <AutoComplete.Option key={1}>
+                                    <AutoComplete.Option key={1} disabled>
                                         第一个选项
                                     </AutoComplete.Option>
                                 </AutoComplete>
@@ -642,7 +641,7 @@ export class AutoCompleteA extends Component {
                 </Row>
                 <Row type="flex" align="top" style={{marginTop: "10px"}}>
                     <Col span={3} offset={1}>
-                        <AntdShuXing shuxing={"backfill"} desc={"上下键时，文本框内自动显示内容"}/>
+                        <AntdShuXing shuxing={"显示带二级的菜单（已知菜单）"} desc={"显示带二级的菜单"}/>
                     </Col>
                     <Col span={18}>
                         <Row type="flex" align="middle">
@@ -662,7 +661,29 @@ export class AutoCompleteA extends Component {
                         </Row>
                     </Col>
                 </Row>
-            </>
+                <Row type="flex" align="top" style={{marginTop: "10px"}}>
+                    <Col span={3} offset={1}>
+                        <AntdShuXing shuxing={"显示带二级的菜单（未知菜单，未开发）"} desc={"显示带二级的菜单"}/>
+                    </Col>
+                    <Col span={18}>
+                        <Row type="flex" align="middle">
+                            <Col span={1}>
+                                <span style={{color: "blue", marginLeft: "5px"}}>示例</span>
+                            </Col>
+                            <Col>
+                                <AutoComplete
+                                    dataSource={optionss}
+                                    style={{width: 200}}
+                                    placeholder="input here"
+                                    allowClear={false}
+                                    autoFocus={false}
+                                    backfill={true}
+                                />
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </div>
         );
     }
 }
