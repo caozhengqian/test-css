@@ -82,6 +82,16 @@ export class AutoCompleteA extends Component {
     onDropdownVisibleChanges = open=>{
         console.info("onDropdownVisibleChanges==>",open);
     }
+
+    onfilters = (inputValue, option) =>{
+        let options = option
+        console.info("执行了=》",option)
+        console.info("执行了=》",inputValue)
+        return  options.props.children.indexOf(inputValue) != -1
+
+
+    }
+
     componentDidMount() {
 
     }
@@ -457,9 +467,8 @@ export class AutoCompleteA extends Component {
                                     allowClear={false}
                                     autoFocus={false}
                                     backfill={true}
-                                    filterOption={(inputValue, option) =>
-                                        option.props.children.indexOf(inputValue) != -1
-                                    }
+                                    filterOption={this.onfilters}
+
                                 />
                             </Col>
                         </Row>
