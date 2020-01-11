@@ -5,11 +5,10 @@ import {
     Route,
 } from "react-router-dom";
 import { withRouter } from "react-router";
-import Closure from './闭包closure';
-import YuanXingLian from './原型链';
+import ListX from './ListX';
 
 
-class Work extends React.PureComponent {
+class GongNeng extends React.PureComponent {
 
     componentDidMount(){
     }
@@ -20,11 +19,10 @@ class Work extends React.PureComponent {
         } = this.props;
         return (
             <Switch>
-                <Route path={`${path}/closure`} component={Closure} />
-                <Route path={`${path}/yuanxinglian`} component={YuanXingLian} />
+                <Route path={`${path}/listx`} component={ListX} />
             </Switch>
         );
     }
 }
 
-export default withRouter(Work)
+export default withRouter(GongNeng)

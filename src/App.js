@@ -8,6 +8,7 @@ import BackgroundImg from './background/backgroundImg';
 import Null from "./null/null";
 import Antd from "../src/antd";
 import Work from "../src/work";
+import GongNeng from "../src/gongneng";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
               </Route>
               <Route path="/work">
                   <Work />
+              </Route>
+              <Route path="/gongneng">
+                  <GongNeng />
               </Route>
 
           </Switch>

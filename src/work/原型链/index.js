@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import {Row, Col} from 'antd';
 
-export class Closure extends Component {
+export class YuanXingLian extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     componentDidMount() {
+        console.info( this.makeFunc)
         let myFunc = this.makeFunc();
         myFunc()
     }
@@ -25,11 +26,11 @@ export class Closure extends Component {
     render() {
         return (
             <div className="fuwu-zhichi">
-                <p>函数以及创建该函数的词法环境组合而成。这个环境包含了这个闭包创建时所能访问的所有局部变量。</p>
+                <p>原型链</p>
             </div>
 
         );
     }
 }
 
-export default Closure;
+export default YuanXingLian;
