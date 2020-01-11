@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import BackgroundImg from './background/backgroundImg';
 import Null from "./null/null";
-import Antd from "../src/antd"
+import Antd from "../src/antd";
+import Work from "../src/work";
+
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
               </Route>
               <Route path="/antd">
                   <Antd />
+              </Route>
+              <Route path="/work">
+                  <Work />
               </Route>
 
           </Switch>
