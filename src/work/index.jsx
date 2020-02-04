@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
 import { withRouter } from "react-router";
 import Closure from './闭包closure';
 import YuanXingLian from './原型链';
+import Life from './Life';
 
 
 class Work extends React.PureComponent {
@@ -22,6 +22,7 @@ class Work extends React.PureComponent {
             <Switch>
                 <Route path={`${path}/closure`} component={Closure} />
                 <Route path={`${path}/yuanxinglian`} component={YuanXingLian} />
+                <Route path={`${path}/life`} component={Life} />
             </Switch>
         );
     }

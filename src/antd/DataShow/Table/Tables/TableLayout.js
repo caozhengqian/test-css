@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Row, Col,Table} from 'antd';
+import {Table} from 'antd';
 const dataSource = [
     {
         key: '1',
@@ -43,7 +43,6 @@ export class TableLayout extends Component {
     }
 
     render() {
-        const childrenColumnName=["a","b"]
         return (
             <div>
                 <Table dataSource={dataSource} columns={columns} childrenColumnName/>

@@ -1,11 +1,12 @@
 import React, {Component} from "react";
-import {Row, Col} from 'antd';
 import "./style.less"
 
 export class ListX extends Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            selectedRowKeys: [],
+        };
     }
 
     componentDidMount() {

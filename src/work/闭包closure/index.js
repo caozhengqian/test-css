@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {Row, Col} from 'antd';
 
 export class Closure extends Component {
     constructor(props) {
