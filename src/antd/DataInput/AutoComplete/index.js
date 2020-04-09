@@ -87,7 +87,7 @@ export class AutoCompleteA extends Component {
         let options = option
         console.info("执行了=》",option)
         console.info("执行了=》",inputValue)
-        return  options.props.children.indexOf(inputValue) != -1
+        return  options.props.children.indexOf(inputValue) !== -1
 
 
     }
