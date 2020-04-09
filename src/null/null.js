@@ -87,6 +87,19 @@ class Null extends React.Component {
             console.info(abc9)
             console.info("abc9,false")
         }
+
+        let array1 = [];
+        if(array1){
+            console.info("array1[]为true")
+        }else{
+            console.info("array1[]当array为false")
+        }
+        let object1={};
+        if(object1){
+            console.info("object1{}为true")
+        }else{
+            console.info("object1{}为false")
+        }
     }
 
     render() {

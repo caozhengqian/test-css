@@ -4,11 +4,12 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import BackgroundImg from './background/backgroundImg';
+import BackgroundImg from './style/background/backgroundImg';
 import Null from "./null/null";
 import Antd from "../src/antd";
 import Work from "../src/work";
 import GongNeng from "../src/gongneng";
+import Style from "../src/style";
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
               <Route exact path="/">
                   <Null />
               </Route>
-              <Route path="/background">
-                  <BackgroundImg />
+              <Route path="/style">
+                  <Style />
               </Route>
               <Route path="/null">
                   <Null />
