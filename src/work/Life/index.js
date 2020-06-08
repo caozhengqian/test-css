@@ -10,6 +10,11 @@ import Life2 from "./Life2";
 
 export class Life extends Component {
     constructor(props) {
+        /**
+         * 两个作用
+         * 通过给 this.state 赋值对象来初始化内部 state。
+         *  为事件处理函数绑定实例
+         **/
         super(props);
         this.state = {
             test:false,
@@ -18,18 +23,58 @@ export class Life extends Component {
         console.info("Life======>constructor");
     }
     static getDerivedStateFromProps(){
+        //详见Life2
+        //使用key={this.state.first} 重新创建子组件。
         console.info("Life======>getDerivedStateFromProps");
         return "";
     }
 
+    fetch0(){
+        fetch("http://localhost:8080/0",{
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+        }).then(res=>res.json()).then(json=> {
+            console.log("返回的值==》",json);
+            this.setState({first:json.time});
+        }).catch(error=>{
+            console.info(error);
+        });
+    }
+
+    fetch3(){
+        fetch("http://localhost:8080/3",{
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+        }).then(res=>res.json()).then(json=> {
+            console.log("返回的值==》",json);
+            this.setState({first:json.time});
+        }).catch(error=>{
+            console.info(error);
+        });
+    }
+
+    fetch6(){
+        fetch("http://localhost:8080/6",{
+            headers:{
+                'Content-Type':'application/json;charset=UTF-8'
+            },
+        }).then(res=>res.json()).then(json=> {
+            console.log("返回的值==》",json);
+            this.setState({first:json.time});
+        }).catch(error=>{
+            console.info(error);
+        });
+    }
+
     componentDidMount() {
+        //Life2，子组件在did中setState,也要等所有组件did完之后再更新
         console.info("Life======>componentDidMount");
-        setTimeout(()=>{
-            console.info("定时器执行了");
-            let test = false;
-            this.setState({test:test})//
-            this.setState({first:"ccc"})
-        },1000)
+        // this.fetch0();
+        // this.fetch3();
+        this.fetch6();
+
     }
     // shouldComponentUpdate(){
     //     //
@@ -60,8 +105,9 @@ export class Life extends Component {
         return (
             <div className="fuwu-zhichi">
                 <p>Life</p>
+                <Life2 toValue={this.state.first} />
                 <Life1 toValue={this.state.first}/>
-                <Life2/>
+
             </div>
 
         );

@@ -10,7 +10,7 @@ export class Life1 extends PureComponent {
     static getDerivedStateFromProps(nextProps){
         console.info(nextProps)
         console.info("Life1======>getDerivedStateFromProps");
-        return "";
+        return null;
     }
 
     componentDidMount() {
